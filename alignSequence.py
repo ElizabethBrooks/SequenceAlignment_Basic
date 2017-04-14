@@ -17,7 +17,7 @@ for line in fileIn:
 	# character-by-character starting after the colon
 	indexLine = 0
 	while indexLine <= (len(line) - len(source)) :
-		if (indexLine == 10) :
+		if (indexLine >= 10) :
 			tempScore = 0
 			indexSource = 0
 			while indexSource < len(source) :

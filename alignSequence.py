@@ -1,6 +1,6 @@
 # Name: Elizabeth Brooks
 # File : alignPython.py
-# Date: 13 April 2017
+# Date: 14 April 2017
 
 # Gain access to a file
 fileIn = open("seq.txt")

@@ -25,22 +25,22 @@ for line in fileIn:
 			# Traverse the characters of the source word and current line segment
 			while indexSource < len(source) :
 				# Move line index with word index by character
-				indexMatch = indexLine + indexSource;
+				indexMatch = indexLine + indexSource
 				# Add 5 to current word placement score for matches
 				# and subtract 3 for mismatches
 				if (line[indexMatch] == source[indexSource]) :
-					tempScore = tempScore + 5;
+					tempScore = tempScore + 5
 				else:
-					tempScore = tempScore - 3;
+					tempScore = tempScore - 3
 				# Move the word index by charcter
-				indexSource = indexSource + 1;
+				indexSource = indexSource + 1
 			# Keep track of the last highest score, line, and placememnt
 			if (tempScore >= bestScore) :
 				bestScore = tempScore
 				matchedLine = line
-				matchDisplacement = indexLine;
+				matchDisplacement = indexLine
 		# Move the line index by character
-		indexLine = indexLine + 1;
+		indexLine = indexLine + 1
 # Print the best matched line and score for the input source
 # as well as the source sequence and last found matched sequence
 print("\nSOURCE: " + source + "\nHighest score: " + str(bestScore) + "\nLast best match: " + matchedLine[:8] + "\n\n" + source.rjust(matchDisplacement) + "\n" + ('|'*len(source)).rjust(matchDisplacement) + "\n" + matchedLine[10:])
